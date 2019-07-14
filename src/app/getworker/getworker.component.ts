@@ -14,7 +14,7 @@ export class GetworkerComponent implements OnInit {
   ngOnInit() {
   }
   get(){
-    this.http.post("http://localhost:8000/get-tasks-for-worker/", {workerid: this.workerid}).subscribe(
+    this.http.post("http://localhost:8000/get-tasks-for-worker/", {workerId: this.workerid}).subscribe(
       (data)=>{
         this.list = <any>data;
         console.log(this.list);
