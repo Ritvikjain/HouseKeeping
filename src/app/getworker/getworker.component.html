@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+      <h4>Get Worker</h4>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Worker ID</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter WorkerID" [(ngModel)]="workerid">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="get()">Get Task</button>
+    </div>
+    <div class="p-5 justify-text-center">
+      <ul class="list-group mx-5 justify-text-center">
+        <li *ngFor="let item of list" class="list-group-item justify-text-center">{{item.task}}</li>
+      </ul>
+    </div>
+  </div>

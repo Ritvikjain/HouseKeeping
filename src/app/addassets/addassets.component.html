@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Add Assets</h4>
+  </div>
+  <div class="card-body">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Assets Name</label>
+        <input type="text" class="form-control" placeholder="Enter Assets Name" [(ngModel)]="assetname">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="add()">Add Asset</button>
+  </div>
+  <div class="row justify-content-center">
+    <span (click)="showList()" *ngIf="!show">View All Assets<i class="fas fa-angle-down ml-2"></i></span>
+    <span (click)="hideList()" *ngIf="show">Hide All Assets<i class="fas fa-angle-up ml-2"></i></span>
+  </div>
+  <div class="p-5 justify-text-center" *ngIf="show">
+    <h4 class="row justify-content-center">All Assets</h4>
+    <ul class="list-group mx-5 justify-text-center">
+      <li *ngFor="let item of assetsList" class="list-group-item justify-text-center">{{item.name}}</li>
+    </ul>
+  </div>
+</div>
